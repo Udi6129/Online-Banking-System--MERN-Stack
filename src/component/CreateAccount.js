@@ -1,61 +1,65 @@
 import React from "react";
-const CreateAccount=()=>{
-    return(
-        <div><center><h1>Account</h1></center><hr/>
-        
+
+const CreateAccount = () => {
+  const msg = ""; // Added this to avoid error for {msg}
+
+  return (
+    <div>
+      <h1><center>Create Account Page</center></h1>
+      <hr />
+      <center>
         <div className="row">
-<div className="col-md-4"></div>
-<div className="col-md-4">
+          <hr />
+          <center><h3>{msg}</h3></center>
+          <hr />
+          <div className="col-md-4"></div>
+          <div className="col-md-4">
+            <div className="form-floating mb-3">
+              <input type="number" className="form-control" id="pinInput" placeholder="PIN" />
+              <label htmlFor="pinInput">PIN</label>
+            </div>
 
+            <div className="row">
+              <div className="col">
+                <input type="text" className="form-control" placeholder="Name"  />
+              </div>
+              <div className="col">
+                <input type="text" className="form-control" placeholder="Father's Name"   />
+              </div>
+            </div><br />
 
+            <div className="row">
+              <div className="col">
+                <input type="email" className="form-control" placeholder="E-mail"   />
+              </div>
+              <div className="col">
+                <input type="number" className="form-control" placeholder="Phone Number"   />
+              </div>
+            </div><br />
 
-Enter Name
-<input type="text" className="form-control" id="n"></input>
-Father Name
-<input type="text" className="form-control" id="f"></input>
+            <div className="row">
+              <div className="col">
+                <input type="text" className="form-control" placeholder="Country"  />
+              </div>
+              <div className="col">
+                <input type="text" className="form-control" placeholder="State"   />
+              </div>
+              <div className="col">
+                <input type="text" className="form-control" placeholder="City"   />
+              </div>
+            </div><br />
 
-<div className="row">
-    <div className="col">
-        Email
-        <input type="text" className="form-control" id="e"></input>
-    </div>
-    <div className="col">
-        Phone
-        <input type="text" className="form-control" id="p"></input>
-    </div>
-</div>
+            <div className="form-floating mb-3">
+              <input type="number" className="form-control"   placeholder="Amount" />
+              <label htmlFor="amountInput">Amount</label>
+            </div><br />
 
-Gender
-<input type="text" className="form-control" id="g"></input>
-
-<div className="row">
-    <div className="col">
-        Country
-        <input type="text" className="form-control" id="c"></input>
-    </div>
-    <div className="col">
-        State
-        <input type="text" className="form-control" id="s"></input>
-    </div>
-    <div className="col">
-        City
-        <input type="text" className="form-control" id="ci"></input>
-    </div>
-</div>
-<br/>   
-<input type="submit" value="Create" className="btn btn-danger"></input>
-
-
-</div>
-<div className="col-md-4"></div>
-
-
+            <input type="submit" value="Create Account" className="btn btn-primary" />
+          </div>
         </div>
-        
-        
-        
-        
-        </div>
-    )
-}
+      </center>
+    </div>
+  );
+};
+
 export default CreateAccount;
